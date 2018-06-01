@@ -17,7 +17,7 @@
         <!-- to run integration-tests: mvn install -DskipITs=false -->
         <module>obsidian-daokit-bom</module>
         <module>obsidian-daokit-core</module>
-        <module>obsidian-daokit-support</module>
+        <module>obsidian-daokit-adapter</module>
     </modules>
 
     <properties>

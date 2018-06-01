@@ -6,11 +6,11 @@
 
     <parent>
         <groupId>org.llaith.obsidian-daokit</groupId>
-        <artifactId>obsidian-daokit-support</artifactId>
+        <artifactId>obsidian-daokit-adapter</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>obsidian-daokit-support-jdbi</artifactId>
+    <artifactId>obsidian-daokit-adapter-jdbc</artifactId>
 
     <dependencyManagement>
         <dependencies>
@@ -26,13 +26,13 @@
 
     <dependencies>
         
-        <!-- project deps -->
+        <!-- project modules -->
         <dependency>
             <groupId>org.llaith.obsidian-daokit</groupId>
             <artifactId>obsidian-daokit-core</artifactId>
         </dependency>
         
-        <!-- product deps -->
+        <!-- product modules -->
         <dependency>
             <groupId>org.llaith.onyx-toolkit</groupId>
             <artifactId>onyx-toolkit-core</artifactId>
@@ -44,28 +44,18 @@
         
         <!-- core deps -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jdbi</groupId>
-            <artifactId>jdbi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-parameter-names</artifactId>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
         </dependency>
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
         </dependency>
+
+        <!-- logging deps -->
         <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
 
         <!-- test deps -->

@@ -6,11 +6,11 @@
 
     <parent>
         <groupId>org.llaith.obsidian-daokit</groupId>
-        <artifactId>obsidian-daokit-support</artifactId>
+        <artifactId>obsidian-daokit-adapter</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>obsidian-daokit-support-sql2o</artifactId>
+    <artifactId>obsidian-daokit-adapter-sql2o</artifactId>
 
     <dependencyManagement>
         <dependencies>
