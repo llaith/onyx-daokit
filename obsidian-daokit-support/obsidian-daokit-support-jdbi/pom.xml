@@ -38,8 +38,8 @@
             <artifactId>onyx-toolkit-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>tkt.stilleto</groupId>
-            <artifactId>stilleto-testkit-docker</artifactId>
+            <groupId>org.llaith.mint-testkit</groupId>
+            <artifactId>mint-testkit</artifactId>
         </dependency>
         
         <!-- core deps -->

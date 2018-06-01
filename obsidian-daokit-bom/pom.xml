@@ -66,11 +66,11 @@
                 <version>${toolkit.version}</version>
             </dependency>
 
-            <!-- old product deps -->
+            <!-- other product deps -->
             <dependency>
-                <groupId>tkt.stilleto</groupId>
-                <artifactId>stilleto-testkit-docker</artifactId>
-                <version>${toolkit.version}</version>
+                <groupId>org.llaith.mint-testkit</groupId>
+                <artifactId>mint-testkit</artifactId>
+                <version>${testkit.version}</version>
             </dependency>
 
             <!-- other deps -->
