@@ -1,0 +1,4 @@
+
+CREATE TABLE ${SCHEMA_ID}.temp_table(
+  id SERIAL PRIMARY KEY
+)
