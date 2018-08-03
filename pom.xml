@@ -363,16 +363,27 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-llaith-llaithseed</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/llaith/llaithseed</url>
+        </repository>
+    </repositories>
+
     <distributionManagement>
         <repository>
             <id>InternalReleases</id>
             <name>Internal Releases</name>
-            <url>http://nexus.uk.novamedia.com:8081/nexus/content/repositories/releases/</url>
+            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
             <id>InternalSnapshots</id>
             <name>Internal Snapshots</name>
-            <url>http://nexus.uk.novamedia.com:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

@@ -8,8 +8,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.llaith.mint.testkit.docker.junit.ext.pgsql.PostgresConfig;
-import org.llaith.mint.testkit.docker.junit.ext.pgsql.PostgresResource;
 import org.skife.jdbi.v2.DBI;
 import org.skife.jdbi.v2.Handle;
 import org.skife.jdbi.v2.util.LongColumnMapper;

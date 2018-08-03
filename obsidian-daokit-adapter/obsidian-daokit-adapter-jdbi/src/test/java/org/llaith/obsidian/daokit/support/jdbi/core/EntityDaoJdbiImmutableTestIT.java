@@ -8,8 +8,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.llaith.mint.testkit.docker.junit.ext.pgsql.PostgresConfig;
-import org.llaith.mint.testkit.docker.junit.ext.pgsql.PostgresResource;
 import org.skife.jdbi.v2.DBI;
 import org.skife.jdbi.v2.Handle;
 import org.llaith.obsidian.daokit.support.jdbi.core.dao.JdbiDaoActionFactory;
@@ -28,8 +26,6 @@ import java.util.Collections;
 import java.util.UUID;
 
 import static java.util.Collections.singletonList;
-import static org.llaith.mint.testkit.docker.junit.GenericWaitingStrategies.waitForPort;
-import static org.llaith.mint.testkit.docker.junit.ext.pgsql.WaitForPostgresStrategy.waitForSelect;
 
 /**
  *

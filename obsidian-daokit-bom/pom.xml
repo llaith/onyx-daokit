@@ -16,7 +16,7 @@
     <properties>
 
         <toolkit.version>1.0-SNAPSHOT</toolkit.version>
-        <testkit.version>1.0-SNAPSHOT</testkit.version>
+        <testkit.version>1.0-alpha1</testkit.version>
 
         <guava.version>23.0</guava.version>
         <commons-lang3.version>3.6</commons-lang3.version>
@@ -68,8 +68,8 @@
 
             <!-- other product deps -->
             <dependency>
-                <groupId>org.llaith.mint-testkit</groupId>
-                <artifactId>mint-testkit</artifactId>
+                <groupId>llaithseed</groupId>
+                <artifactId>llaithseed-testkit</artifactId>
                 <version>${testkit.version}</version>
             </dependency>
 

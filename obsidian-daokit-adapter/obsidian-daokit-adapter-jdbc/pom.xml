@@ -38,8 +38,9 @@
             <artifactId>onyx-toolkit-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.llaith.mint-testkit</groupId>
-            <artifactId>mint-testkit</artifactId>
+            <groupId>llaithseed</groupId>
+            <artifactId>llaithseed-testkit</artifactId>
+            <scope>test</scope>
         </dependency>
         
         <!-- core deps -->
