@@ -18,6 +18,7 @@ import org.llaith.obsidian.daokit.core.dao.insertonly.ImmutableEntityDao;
 import org.llaith.obsidian.daokit.core.orm.OrmBuilder;
 import org.llaith.obsidian.daokit.core.orm.OrmStatements;
 import org.llaith.obsidian.daokit.core.statement.annotation.Column;
+import org.testcontainers.containers.PostgreSQLContainer;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
@@ -34,15 +35,7 @@ import static java.util.Collections.singletonList;
 public class EntityDaoJdbiImmutableTestIT {
 
     @ClassRule
-    public static PostgresResource postgres =
-            PostgresConfig.builder()
-                          .image("postgres:9.6")
-                          .postgresPort("5432/tcp")
-                          .waitFor(60, 6, 10, (wait) -> {
-                              wait.addStrategy(waitForPort("5432/tcp"));
-                              wait.addStrategy(waitForSelect("SELECT 1"));
-                          })
-                          .build();
+    public static PostgreSQLContainer postgres = new PostgreSQLContainer();
 
     private static DataSource dataSource;
 
@@ -89,7 +82,7 @@ public class EntityDaoJdbiImmutableTestIT {
     }
 
     @Test
-    public void testBasicCommitAndCleanup() throws SQLException {
+    public void testBasicCommitAndCleanup() {
 
         final Example example = new Example("name", "description");
 

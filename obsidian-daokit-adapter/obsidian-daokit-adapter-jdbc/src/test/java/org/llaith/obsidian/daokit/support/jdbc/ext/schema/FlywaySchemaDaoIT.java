@@ -8,13 +8,14 @@ import org.junit.ClassRule;
 import org.junit.Test;
 import org.llaith.onyx.toolkit.results.ResultCount;
 import org.llaith.obsidian.daokit.ext.schema.FlywaySchemaDao;
+import org.testcontainers.containers.PostgreSQLContainer;
 
 import javax.sql.DataSource;
 
 public class FlywaySchemaDaoIT {
 
     @ClassRule
-    public static PostgresResource postgres = PostgresResource.buildWithDefaults();
+    public static PostgreSQLContainer postgres = new PostgreSQLContainer();
 
     @Test
     public void testCreateSchema() {

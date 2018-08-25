@@ -8,16 +8,17 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.skife.jdbi.v2.DBI;
-import org.skife.jdbi.v2.Handle;
-import org.skife.jdbi.v2.util.LongColumnMapper;
-import org.llaith.obsidian.daokit.support.jdbi.core.dao.JdbiDaoActionFactory;
-import org.llaith.obsidian.daokit.support.jdbi.core.session.JdbiTransactionControl;
 import org.llaith.obsidian.daokit.core.dao.simple.SimpleDao;
 import org.llaith.obsidian.daokit.core.dao.simple.SimpleEntity;
 import org.llaith.obsidian.daokit.core.orm.OrmBuilder;
 import org.llaith.obsidian.daokit.core.orm.OrmStatements;
 import org.llaith.obsidian.daokit.core.statement.annotation.Column;
+import org.llaith.obsidian.daokit.support.jdbi.core.dao.JdbiDaoActionFactory;
+import org.llaith.obsidian.daokit.support.jdbi.core.session.JdbiTransactionControl;
+import org.skife.jdbi.v2.DBI;
+import org.skife.jdbi.v2.Handle;
+import org.skife.jdbi.v2.util.LongColumnMapper;
+import org.testcontainers.containers.PostgreSQLContainer;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
@@ -33,9 +34,7 @@ import static java.util.Collections.singletonList;
 public class EntityDaoJdbiSimpleTestIT {
 
     @ClassRule
-    public static PostgresResource postgres =
-            PostgresConfig.builderWithDefaults()
-                          .build();
+    public static PostgreSQLContainer postgres = new PostgreSQLContainer();
 
     private static DataSource dataSource;
 
@@ -53,7 +52,11 @@ public class EntityDaoJdbiSimpleTestIT {
         dataSource = new HikariDataSource(hikariConfig);
 
         // create table
-        java.sql.Statement statement = dataSource.getConnection().createStatement();
+        java.sql.Statement statement = dataSource
+                .getConnection()
+                .createStatement();
+
+        // execute
         statement.execute(Example.createSql);
 
         // init session
@@ -78,7 +81,7 @@ public class EntityDaoJdbiSimpleTestIT {
     }
 
     @Test
-    public void testBasicRollback() throws SQLException {
+    public void testBasicRollback() {
 
         String externalId = null;
 
@@ -112,7 +115,7 @@ public class EntityDaoJdbiSimpleTestIT {
     }
 
     @Test
-    public void testBasicCommitAndCleanup() throws SQLException {
+    public void testBasicCommitAndCleanup() {
 
         final Example example = new Example("name", "description");
 
@@ -158,7 +161,7 @@ public class EntityDaoJdbiSimpleTestIT {
     }
 
     @Test
-    public void testBasicUpdate() throws SQLException {
+    public void testBasicUpdate() {
 
         final Example example = new Example("name", "description");
 
@@ -261,7 +264,7 @@ public class EntityDaoJdbiSimpleTestIT {
                     new OrmBuilder<>(
                             OrmStatements.newPostgresStatements(),
                             ":",
-                            new OrmBuilder.OrmMapping<>(null, "example", EntityDaoJdbiImmutableTestIT.Example.class)),
+                            new OrmBuilder.OrmMapping<>(null, "example", EntityDaoJdbiSimpleTestIT.Example.class)),
                     new JdbiDaoActionFactory().build(Example.class, LongColumnMapper.WRAPPER),
                     new MetricRegistry(),
                     handle);

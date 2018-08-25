@@ -10,7 +10,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.llaith.mint.testkit.docker.junit.ext.pgsql.PostgresResource;
 import org.skife.jdbi.v2.DBI;
 import org.skife.jdbi.v2.Handle;
 import org.skife.jdbi.v2.util.LongColumnMapper;
@@ -25,6 +24,7 @@ import org.llaith.obsidian.daokit.core.statement.annotation.Column;
 import org.llaith.obsidian.daokit.core.statement.annotation.Converters.EnumConverter;
 import org.llaith.obsidian.daokit.core.statement.annotation.Converters.EnumIdConverter;
 import org.llaith.obsidian.daokit.core.statement.annotation.Converters.JsonConverter;
+import org.testcontainers.containers.PostgreSQLContainer;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -39,7 +39,7 @@ import static org.llaith.onyx.toolkit.util.exception.ExceptionUtil.rethrowOrRetu
 /**
  *
  */
-public class JdbiConverterTestIT {
+public class JdbiConverterTest {
 
     private static ObjectMapper mapper = new ObjectMapper().registerModule(new ParameterNamesModule());
 
@@ -172,7 +172,7 @@ public class JdbiConverterTestIT {
     }
 
     @ClassRule
-    public static PostgresResource postgres = PostgresResource.buildWithDefaults();
+    public static PostgreSQLContainer postgres = new PostgreSQLContainer();
 
     @BeforeClass
     public static void setupJdbi() throws SQLException {

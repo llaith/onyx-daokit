@@ -24,6 +24,7 @@
 
         <!-- override this to perform integration tests -->
         <skipITs>true</skipITs>
+        <skipTests>false</skipTests>
 
         <!-- core settings -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -39,6 +40,7 @@
         <maven-deploy-plugin>2.8.2</maven-deploy-plugin>
         <maven-reactor-plugin>1.1</maven-reactor-plugin>
         <maven-surefire-plugin>2.12.4</maven-surefire-plugin>
+        <maven-surefire-report-plugin>2.12.4</maven-surefire-report-plugin>
         <maven-jar-plugin>2.5</maven-jar-plugin>
         <maven-resources-plugin>2.7</maven-resources-plugin>
         <maven-compiler-plugin>3.1</maven-compiler-plugin>
@@ -50,7 +52,7 @@
         <jacoco-maven-plugin>0.7.9</jacoco-maven-plugin>
 
         <!-- activate findbugs -->
-        <findbugs.version>3.0.1</findbugs.version>
+        <findbugs.version>3.0.2</findbugs.version>
 
         <!-- logging deps, not possible any other way because otherwise cross-exclusions -->
         <slf4j.version>1.7.25</slf4j.version>
@@ -191,6 +193,10 @@
                     <version>${maven-surefire-plugin}</version>
                 </plugin>
                 <plugin>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>${maven-surefire-plugin}</version>
+                </plugin>
+                <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>${maven-jar-plugin}</version>
                     <executions>
@@ -321,20 +327,20 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <configuration>
                     <skipTests>${skipITs}</skipTests>
+                    <includes>
+                        <include>**/*IT.java</include>
+                    </includes>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>integration-test</id>
                         <goals>
                             <goal>integration-test</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>verify</id>
-                        <goals>
                             <goal>verify</goal>
                         </goals>
                     </execution>
@@ -342,20 +348,97 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>${skipTests}</skipTests>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <configuration>
+                    <alwaysGenerateFailsafeReport>true</alwaysGenerateFailsafeReport>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report-only</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--<plugin>-->
+            <!--<artifactId>maven-failsafe-plugin</artifactId>-->
+            <!--<configuration>-->
+            <!--<skipTests>${skipITs}</skipTests>-->
+            <!--<includes>-->
+            <!--<include>**/*IT.java</include>-->
+            <!--</includes>-->
+            <!--<encoding>${project.reporting.outputEncoding}</encoding>-->
+            <!--<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>-->
+            <!--<argLine>-Dfile.encoding=${project.build.sourceEncoding}</argLine>-->
+            <!--<testFailureIgnore>false</testFailureIgnore>-->
+            <!--</configuration>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>integration-test</id>-->
+            <!--<goals>-->
+            <!--<goal>integration-test</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--<execution>-->
+            <!--<id>verify</id>-->
+            <!--<goals>-->
+            <!--<goal>verify</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
+
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>default-prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>report</id>
+                        <id>default-report</id>
                         <phase>prepare-package</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
+                    </execution>
+                    <execution>
+                        <id>default-check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <rule>
+                                    <element>PACKAGE</element>
+                                    <limits>
+                                        <limit>
+                                            <counter>LINE</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.00</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

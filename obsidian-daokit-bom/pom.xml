@@ -16,7 +16,6 @@
     <properties>
 
         <toolkit.version>1.0-SNAPSHOT</toolkit.version>
-        <testkit.version>1.0-alpha1</testkit.version>
 
         <guava.version>23.0</guava.version>
         <commons-lang3.version>3.6</commons-lang3.version>
@@ -31,7 +30,8 @@
         <modelmapper.version>0.7.3</modelmapper.version>
         <junit.version>4.12</junit.version>
         <postgresql.version>42.1.4</postgresql.version>
-
+        <testcontainers.version>1.8.3</testcontainers.version>
+        
     </properties>
 
     <dependencyManagement>
@@ -64,13 +64,6 @@
                 <groupId>org.llaith.onyx-toolkit</groupId>
                 <artifactId>onyx-toolkit-core</artifactId>
                 <version>${toolkit.version}</version>
-            </dependency>
-
-            <!-- other product deps -->
-            <dependency>
-                <groupId>llaithseed</groupId>
-                <artifactId>llaithseed-testkit</artifactId>
-                <version>${testkit.version}</version>
             </dependency>
 
             <!-- other deps -->
@@ -167,6 +160,17 @@
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers</artifactId>
+                <version>${testcontainers.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${testcontainers.version}</version>
             </dependency>
 
             <!-- put it back cause we excluded it -->

@@ -37,11 +37,6 @@
             <groupId>org.llaith.onyx-toolkit</groupId>
             <artifactId>onyx-toolkit-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>llaithseed</groupId>
-            <artifactId>llaithseed-testkit</artifactId>
-            <scope>test</scope>
-        </dependency>
         
         <!-- core deps -->
         <dependency>
@@ -66,6 +61,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <scope>test</scope>
@@ -73,6 +73,11 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
             <scope>test</scope>
         </dependency>
 
