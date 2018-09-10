@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.llaith.onyx-daokit</groupId>
+        <groupId>org.llaith.onyx</groupId>
         <artifactId>onyx-daokit</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
