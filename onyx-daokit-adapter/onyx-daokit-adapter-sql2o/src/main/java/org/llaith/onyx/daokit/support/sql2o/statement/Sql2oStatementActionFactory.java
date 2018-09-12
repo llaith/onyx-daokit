@@ -1,10 +1,5 @@
 package org.llaith.onyx.daokit.support.sql2o.statement;
 
-import org.llaith.onyx.toolkit.results.ResultCount;
-import org.llaith.onyx.toolkit.results.ResultList;
-import org.llaith.onyx.toolkit.results.ResultObject;
-import org.sql2o.Connection;
-import org.sql2o.Query;
 import org.llaith.onyx.daokit.core.statement.ComposedStatement;
 import org.llaith.onyx.daokit.core.statement.ComposedStatementException;
 import org.llaith.onyx.daokit.core.statement.ResultCountAction;
@@ -12,7 +7,12 @@ import org.llaith.onyx.daokit.core.statement.ResultListAction;
 import org.llaith.onyx.daokit.core.statement.ResultObjectAction;
 import org.llaith.onyx.daokit.core.statement.annotation.PropertyUtil;
 import org.llaith.onyx.daokit.core.statement.annotation.PropertyUtil.PropertyAccess;
-import org.llaith.onyx.toolkit.util.exception.ThrowableFactory;
+import org.llaith.onyx.toolkit.exception.creation.ThrowableFactory;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
+import org.llaith.onyx.toolkit.pattern.results.ResultList;
+import org.llaith.onyx.toolkit.pattern.results.ResultObject;
+import org.sql2o.Connection;
+import org.sql2o.Query;
 
 import javax.annotation.Nullable;
 import java.util.List;

@@ -3,14 +3,14 @@ package org.llaith.onyx.daokit.core.statement.annotation;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.EnumId;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.EnumId;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
 
 import static java.lang.String.format;
-import static org.llaith.onyx.toolkit.util.lang.ToStringUtil.asString;
+import static org.llaith.onyx.toolkit.lang.ToStringUtil.asString;
 
 /**
  *

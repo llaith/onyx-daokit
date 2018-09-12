@@ -1,8 +1,8 @@
 package org.llaith.onyx.daokit.support.jdbi.core.statement;
 
-import org.llaith.onyx.toolkit.results.ResultCount;
-import org.llaith.onyx.toolkit.results.ResultList;
-import org.llaith.onyx.toolkit.results.ResultObject;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
+import org.llaith.onyx.toolkit.pattern.results.ResultList;
+import org.llaith.onyx.toolkit.pattern.results.ResultObject;
 import org.skife.jdbi.v2.Handle;
 import org.skife.jdbi.v2.Query;
 import org.skife.jdbi.v2.StatementContext;
@@ -10,7 +10,7 @@ import org.skife.jdbi.v2.Update;
 import org.skife.jdbi.v2.tweak.ResultColumnMapper;
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
 import org.skife.jdbi.v2.util.LongColumnMapper;
-import org.llaith.onyx.toolkit.util.exception.ThrowableFactory.ExceptionWithoutCause;
+import org.llaith.onyx.toolkit.exception.creation.ThrowableFactory.ExceptionWithoutCause;
 import org.llaith.onyx.daokit.core.statement.ComposedStatement;
 import org.llaith.onyx.daokit.core.statement.ComposedStatementBuilder;
 import org.llaith.onyx.daokit.core.statement.ComposedStatementException;

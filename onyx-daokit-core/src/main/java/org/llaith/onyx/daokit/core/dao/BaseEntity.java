@@ -1,6 +1,6 @@
 package org.llaith.onyx.daokit.core.dao;
 
-import org.llaith.onyx.toolkit.util.lang.Stringify;
+import org.llaith.onyx.toolkit.lang.Stringify;
 
 import java.io.Serializable;
 

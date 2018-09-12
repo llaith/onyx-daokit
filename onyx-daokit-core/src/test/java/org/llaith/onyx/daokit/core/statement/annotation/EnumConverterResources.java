@@ -2,7 +2,7 @@ package org.llaith.onyx.daokit.core.statement.annotation;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.llaith.onyx.toolkit.util.lang.EnumId;
+import org.llaith.onyx.toolkit.lang.EnumId;
 
 import java.lang.reflect.Field;
 

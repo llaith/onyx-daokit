@@ -3,7 +3,7 @@ package org.llaith.onyx.daokit.core.dao;
 import org.llaith.onyx.daokit.core.statement.ResultCountAction;
 import org.llaith.onyx.daokit.core.statement.ResultListAction;
 import org.llaith.onyx.daokit.core.statement.ResultObjectAction;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.lang.Guard;
 
 import java.io.Serializable;
 

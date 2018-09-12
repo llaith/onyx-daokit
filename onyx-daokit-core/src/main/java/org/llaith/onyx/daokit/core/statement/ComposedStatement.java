@@ -2,15 +2,15 @@ package org.llaith.onyx.daokit.core.statement;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
-import org.llaith.onyx.toolkit.results.ResultCount;
-import org.llaith.onyx.toolkit.results.ResultList;
-import org.llaith.onyx.toolkit.results.ResultObject;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.exception.handler.CompoundExceptionHandler;
+import org.llaith.onyx.toolkit.exception.handler.ExceptionHandler;
+import org.llaith.onyx.toolkit.lang.Guard;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
+import org.llaith.onyx.toolkit.pattern.results.ResultList;
+import org.llaith.onyx.toolkit.pattern.results.ResultObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.llaith.onyx.toolkit.util.exception.CompoundExceptionHandler;
-import org.llaith.onyx.toolkit.util.exception.ExceptionHandler;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.Guard;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -3,8 +3,8 @@ package org.llaith.onyx.daokit.core.statement.builder;
 import com.google.common.base.Joiner;
 import org.llaith.onyx.daokit.core.statement.annotation.PropertyUtil;
 import org.llaith.onyx.daokit.core.statement.StatementBuilder;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.Guard;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

@@ -1,8 +1,8 @@
 package org.llaith.onyx.daokit.core.statement.annotation;
 
-import org.llaith.onyx.toolkit.util.lang.Guard;
-import org.llaith.onyx.toolkit.util.reflection.ClassStructureUtil;
-import org.llaith.onyx.toolkit.util.reflection.FieldAccessUtil;
+import org.llaith.onyx.toolkit.lang.Guard;
+import org.llaith.onyx.toolkit.reflection.ClassStructureUtil;
+import org.llaith.onyx.toolkit.reflection.FieldAccessUtil;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -10,10 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
 
-import static org.llaith.onyx.toolkit.util.exception.ExceptionUtil.rethrowOrReturn;
-import static org.llaith.onyx.toolkit.util.lang.StringUtil.camelCaseToSnakeCase;
-import static org.llaith.onyx.toolkit.util.lang.StringUtil.notBlankOrNull;
-import static org.llaith.onyx.toolkit.util.reflection.InstanceUtil.newInstance;
+import static org.llaith.onyx.toolkit.fn.ExcecutionUtil.rethrowOrReturn;
+import static org.llaith.onyx.toolkit.lang.StringUtil.camelCaseToSnakeCase;
+import static org.llaith.onyx.toolkit.lang.StringUtil.notBlankOrNull;
+import static org.llaith.onyx.toolkit.reflection.InstanceUtil.newInstance;
 
 /**
  *

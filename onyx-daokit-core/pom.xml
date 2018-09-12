@@ -26,8 +26,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.llaith.onyx-toolkit</groupId>
-            <artifactId>onyx-toolkit-core</artifactId>
+            <groupId>org.llaith.onyx</groupId>
+            <artifactId>onyx-toolkit</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

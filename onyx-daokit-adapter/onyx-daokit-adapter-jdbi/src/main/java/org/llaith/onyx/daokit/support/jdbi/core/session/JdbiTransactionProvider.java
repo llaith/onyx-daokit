@@ -4,12 +4,12 @@
 
 package org.llaith.onyx.daokit.support.jdbi.core.session;
 
-import org.llaith.onyx.toolkit.session.Session;
-import org.llaith.onyx.toolkit.session.SessionControl;
+import org.llaith.onyx.toolkit.pattern.session.Session;
+import org.llaith.onyx.toolkit.pattern.session.SessionControl;
 import org.skife.jdbi.v2.DBI;
 import org.skife.jdbi.v2.Handle;
 import org.skife.jdbi.v2.exceptions.CallbackFailedException;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
 
 import java.util.Map;
 import java.util.function.Function;

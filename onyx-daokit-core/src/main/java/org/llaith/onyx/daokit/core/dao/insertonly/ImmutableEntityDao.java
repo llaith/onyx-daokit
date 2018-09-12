@@ -1,11 +1,11 @@
 package org.llaith.onyx.daokit.core.dao.insertonly;
 
 import com.codahale.metrics.MetricRegistry;
-import org.llaith.onyx.toolkit.results.ResultList;
-import org.llaith.onyx.toolkit.results.ResultObject;
 import org.llaith.onyx.daokit.core.dao.BaseDao;
 import org.llaith.onyx.daokit.core.dao.EntityDaoActions;
 import org.llaith.onyx.daokit.core.orm.OrmBuilder;
+import org.llaith.onyx.toolkit.pattern.results.ResultList;
+import org.llaith.onyx.toolkit.pattern.results.ResultObject;
 
 import java.util.UUID;
 

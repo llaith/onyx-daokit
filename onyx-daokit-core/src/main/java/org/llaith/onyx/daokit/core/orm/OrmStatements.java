@@ -1,7 +1,7 @@
 package org.llaith.onyx.daokit.core.orm;
 
 import org.llaith.onyx.daokit.core.statement.builder.PagingBuilder;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.lang.Guard;
 
 /**
  *

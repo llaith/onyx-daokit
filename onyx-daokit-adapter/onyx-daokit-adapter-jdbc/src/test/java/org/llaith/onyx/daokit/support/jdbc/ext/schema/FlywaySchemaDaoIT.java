@@ -6,7 +6,7 @@ import org.flywaydb.core.Flyway;
 import org.junit.Assert;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.llaith.onyx.toolkit.results.ResultCount;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
 import org.llaith.onyx.daokit.ext.schema.FlywaySchemaDao;
 import org.testcontainers.containers.PostgreSQLContainer;
 

@@ -3,7 +3,7 @@ package org.llaith.onyx.daokit.core.dao.insertonly;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import org.llaith.onyx.daokit.core.statement.annotation.Column;
 import org.llaith.onyx.daokit.core.dao.BaseEntity;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.lang.Guard;
 
 import java.io.Serializable;
 import java.util.Date;

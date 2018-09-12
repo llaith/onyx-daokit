@@ -15,7 +15,7 @@ import org.skife.jdbi.v2.Handle;
 import org.skife.jdbi.v2.util.LongColumnMapper;
 import org.llaith.onyx.daokit.support.jdbi.core.dao.JdbiDaoActionFactory;
 import org.llaith.onyx.daokit.support.jdbi.core.session.JdbiTransactionControl;
-import org.llaith.onyx.toolkit.util.lang.EnumId;
+import org.llaith.onyx.toolkit.lang.EnumId;
 import org.llaith.onyx.daokit.core.dao.simple.SimpleDao;
 import org.llaith.onyx.daokit.core.dao.simple.SimpleEntity;
 import org.llaith.onyx.daokit.core.orm.OrmBuilder;
@@ -34,7 +34,8 @@ import static java.util.Collections.singletonList;
 import static org.apache.commons.lang3.builder.EqualsBuilder.reflectionEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.llaith.onyx.toolkit.util.exception.ExceptionUtil.rethrowOrReturn;
+import static org.llaith.onyx.toolkit.fn.ExcecutionUtil.rethrowOrReturn;
+
 
 /**
  *

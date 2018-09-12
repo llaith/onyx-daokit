@@ -1,6 +1,6 @@
 package org.llaith.onyx.daokit.support.jdbi.core.session;
 
-import org.llaith.onyx.toolkit.session.SessionControl;
+import org.llaith.onyx.toolkit.pattern.session.SessionControl;
 import org.skife.jdbi.v2.DBI;
 import org.skife.jdbi.v2.Handle;
 

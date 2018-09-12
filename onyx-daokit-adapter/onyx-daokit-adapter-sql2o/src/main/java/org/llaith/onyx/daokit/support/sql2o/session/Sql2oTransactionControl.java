@@ -4,7 +4,7 @@
 
 package org.llaith.onyx.daokit.support.sql2o.session;
 
-import org.llaith.onyx.toolkit.session.SessionControl;
+import org.llaith.onyx.toolkit.pattern.session.SessionControl;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 

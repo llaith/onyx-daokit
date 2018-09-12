@@ -1,11 +1,11 @@
 package org.llaith.onyx.daokit.support.jdbc.core.statement;
 
-import org.llaith.onyx.toolkit.results.ResultCount;
-import org.llaith.onyx.toolkit.util.exception.ThrowableFactory.ExceptionWithoutCause;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
 import org.llaith.onyx.daokit.core.statement.ComposedStatement;
 import org.llaith.onyx.daokit.core.statement.ComposedStatementException;
 import org.llaith.onyx.daokit.core.statement.ResultCountAction;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.exception.creation.ThrowableFactory.ExceptionWithoutCause;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

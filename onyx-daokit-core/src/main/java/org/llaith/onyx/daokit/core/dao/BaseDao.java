@@ -4,8 +4,8 @@ import com.codahale.metrics.MetricRegistry;
 import org.llaith.onyx.daokit.core.orm.OrmBuilder;
 import org.llaith.onyx.daokit.core.statement.ComposedStatementBuilder;
 import org.llaith.onyx.daokit.core.statement.builder.WhereBuilder;
-import org.llaith.onyx.toolkit.results.ResultCount;
-import org.llaith.onyx.toolkit.results.ResultObject;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
+import org.llaith.onyx.toolkit.pattern.results.ResultObject;
 
 import java.io.Serializable;
 import java.util.function.Consumer;

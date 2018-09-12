@@ -4,9 +4,9 @@
 
 package org.llaith.onyx.daokit.support.jdbc.core.session;
 
-import org.llaith.onyx.toolkit.session.Session;
-import org.llaith.onyx.toolkit.session.SessionControl;
-import org.llaith.onyx.toolkit.session.SessionControl.SessionProvider;
+import org.llaith.onyx.toolkit.pattern.session.Session;
+import org.llaith.onyx.toolkit.pattern.session.SessionControl;
+import org.llaith.onyx.toolkit.pattern.session.SessionControl.SessionProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

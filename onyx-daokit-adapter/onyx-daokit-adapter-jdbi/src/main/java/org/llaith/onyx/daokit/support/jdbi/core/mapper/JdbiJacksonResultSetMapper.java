@@ -2,12 +2,11 @@ package org.llaith.onyx.daokit.support.jdbi.core.mapper;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
-import org.skife.jdbi.v2.StatementContext;
-import org.skife.jdbi.v2.tweak.ResultSetMapper;
 import org.llaith.onyx.daokit.core.statement.annotation.Column;
 import org.llaith.onyx.daokit.core.statement.annotation.PropertyUtil;
-import org.llaith.onyx.toolkit.util.exception.ExceptionUtil;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.lang.Guard;
+import org.skife.jdbi.v2.StatementContext;
+import org.skife.jdbi.v2.tweak.ResultSetMapper;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
@@ -15,6 +14,8 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.llaith.onyx.toolkit.fn.ExcecutionUtil.rethrowOrReturn;
 
 /**
  *
@@ -65,9 +66,9 @@ public class JdbiJacksonResultSetMapper<T> implements ResultSetMapper<T> {
 
             final Field f = properties.get(colName);
 
-            final Object value = ExceptionUtil.rethrowOrReturn(() -> Guard.notNull(f.getAnnotation(Column.class).converter())
-                                                                          .newInstance()
-                                                                          .toField(f, o));
+            final Object value = rethrowOrReturn(() -> Guard.notNull(f.getAnnotation(Column.class).converter())
+                                                            .newInstance()
+                                                            .toField(f, o));
 
             values.put(name, value);
 

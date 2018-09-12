@@ -3,12 +3,12 @@
  */
 package org.llaith.onyx.daokit.core.dao.simple;
 
-import org.llaith.onyx.daokit.core.statement.annotation.Column;
-import org.llaith.onyx.toolkit.results.StaleResultException;
 import org.llaith.onyx.daokit.core.dao.BaseEntity;
-import org.llaith.onyx.toolkit.util.lang.ToStringUtil;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.UuidUtil;
+import org.llaith.onyx.daokit.core.statement.annotation.Column;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.ToStringUtil;
+import org.llaith.onyx.toolkit.lang.UuidUtil;
+import org.llaith.onyx.toolkit.pattern.results.StaleResultException;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -98,7 +98,7 @@ public abstract class SimpleEntity extends BaseEntity<Long> implements Serializa
     @Column
     @NotNull
     @Pattern(regexp = ".*[\\S]+.*")// replacement for @NotBlank
-    protected String externalId = UuidUtil.externalId();
+    protected String externalId = UuidUtil.suuid();
 
     @Column
     @NotNull

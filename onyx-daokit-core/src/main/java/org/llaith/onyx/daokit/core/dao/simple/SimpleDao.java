@@ -1,16 +1,16 @@
 package org.llaith.onyx.daokit.core.dao.simple;
 
 import com.codahale.metrics.MetricRegistry;
+import org.llaith.onyx.daokit.core.dao.BaseDao;
+import org.llaith.onyx.daokit.core.dao.EntityDaoActions;
 import org.llaith.onyx.daokit.core.orm.OrmBuilder;
 import org.llaith.onyx.daokit.core.statement.ComposedStatementBuilder;
 import org.llaith.onyx.daokit.core.statement.builder.WhereBuilder;
-import org.llaith.onyx.toolkit.results.ResultCount;
-import org.llaith.onyx.toolkit.results.ResultList;
-import org.llaith.onyx.toolkit.results.ResultObject;
-import org.llaith.onyx.toolkit.util.lang.Guard;
-import org.llaith.onyx.toolkit.util.reflection.MethodAccessUtil;
-import org.llaith.onyx.daokit.core.dao.BaseDao;
-import org.llaith.onyx.daokit.core.dao.EntityDaoActions;
+import org.llaith.onyx.toolkit.lang.Guard;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
+import org.llaith.onyx.toolkit.pattern.results.ResultList;
+import org.llaith.onyx.toolkit.pattern.results.ResultObject;
+import org.llaith.onyx.toolkit.reflection.MethodAccessUtil;
 
 import java.util.Date;
 import java.util.function.Consumer;

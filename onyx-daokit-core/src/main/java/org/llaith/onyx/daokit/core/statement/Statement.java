@@ -1,7 +1,7 @@
 package org.llaith.onyx.daokit.core.statement;
 
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.Guard;
 
 import java.util.Collection;
 import java.util.Collections;

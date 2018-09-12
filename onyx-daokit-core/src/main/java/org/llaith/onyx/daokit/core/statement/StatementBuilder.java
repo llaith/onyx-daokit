@@ -10,11 +10,11 @@ import org.llaith.onyx.daokit.core.statement.builder.PagingBuilder;
 import org.llaith.onyx.daokit.core.statement.builder.SelectBuilder;
 import org.llaith.onyx.daokit.core.statement.builder.UpdateBuilder;
 import org.llaith.onyx.daokit.core.statement.builder.WhereBuilder;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.Guard;
-import org.llaith.onyx.toolkit.util.lang.ParamString;
-import org.llaith.onyx.toolkit.util.lang.StringUtil;
-import org.llaith.onyx.toolkit.util.lang.UuidUtil;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.Guard;
+import org.llaith.onyx.toolkit.lang.ParamString;
+import org.llaith.onyx.toolkit.lang.StringUtil;
+import org.llaith.onyx.toolkit.lang.UuidUtil;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -23,9 +23,9 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.regex.Pattern;
 
-import static org.llaith.onyx.toolkit.util.io.FileUtil.readFromClasspath;
-import static org.llaith.onyx.toolkit.util.io.FileUtil.readFromPath;
-import static org.llaith.onyx.toolkit.util.lang.Guard.notBlankOrNull;
+import static org.llaith.onyx.toolkit.io.FileUtil.readFromClasspath;
+import static org.llaith.onyx.toolkit.io.FileUtil.readFromPath;
+import static org.llaith.onyx.toolkit.lang.Guard.notBlankOrNull;
 
 /**
  * Because these statements can be extended, the code to rewrite the prefixes cannot be in the statement class.

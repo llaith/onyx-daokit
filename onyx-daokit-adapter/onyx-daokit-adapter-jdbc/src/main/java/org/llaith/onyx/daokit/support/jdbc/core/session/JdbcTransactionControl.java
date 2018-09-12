@@ -1,7 +1,7 @@
 package org.llaith.onyx.daokit.support.jdbc.core.session;
 
 
-import org.llaith.onyx.toolkit.session.SessionControl;
+import org.llaith.onyx.toolkit.pattern.session.SessionControl;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

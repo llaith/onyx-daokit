@@ -5,14 +5,14 @@ import org.llaith.onyx.daokit.core.statement.Statement;
 import org.llaith.onyx.daokit.core.statement.StatementBuilder;
 import org.llaith.onyx.daokit.core.statement.annotation.PropertyUtil;
 import org.llaith.onyx.daokit.core.statement.builder.WhereBuilder;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.StringUtil;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.StringUtil;
 
 import java.util.function.Consumer;
 
 import static java.lang.String.format;
-import static org.llaith.onyx.toolkit.util.lang.Guard.notBlankOrNull;
-import static org.llaith.onyx.toolkit.util.lang.Guard.notNull;
+import static org.llaith.onyx.toolkit.lang.Guard.notBlankOrNull;
+import static org.llaith.onyx.toolkit.lang.Guard.notNull;
 
 /**
  *

@@ -1,7 +1,7 @@
 package org.llaith.onyx.daokit.core.statement;
 
 
-import org.llaith.onyx.toolkit.results.ResultList;
+import org.llaith.onyx.toolkit.pattern.results.ResultList;
 
 import java.util.function.Function;
 

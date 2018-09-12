@@ -1,10 +1,10 @@
 package org.llaith.onyx.daokit.core.statement.builder;
 
 import org.llaith.onyx.daokit.core.statement.StatementBuilder;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.Guard;
-import org.llaith.onyx.toolkit.util.lang.ParamString;
-import org.llaith.onyx.toolkit.util.lang.StringUtil;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.Guard;
+import org.llaith.onyx.toolkit.lang.ParamString;
+import org.llaith.onyx.toolkit.lang.StringUtil;
 
 /**
  *

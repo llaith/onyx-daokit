@@ -3,9 +3,10 @@ package org.llaith.onyx.daokit.support.jdbi.core.mapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.lang.Guard;
 
-import static org.llaith.onyx.toolkit.util.exception.ExceptionUtil.rethrowOrReturn;
+import static org.llaith.onyx.toolkit.fn.ExcecutionUtil.rethrowOrReturn;
+
 
 /**
  *

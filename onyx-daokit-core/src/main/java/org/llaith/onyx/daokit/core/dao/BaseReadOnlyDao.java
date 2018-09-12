@@ -3,12 +3,13 @@ package org.llaith.onyx.daokit.core.dao;
 import com.codahale.metrics.MetricRegistry;
 import org.llaith.onyx.daokit.core.orm.OrmBuilder;
 import org.llaith.onyx.daokit.core.statement.ComposedStatementBuilder;
-import org.llaith.onyx.toolkit.results.ResultList;
-import org.llaith.onyx.toolkit.results.ResultObject;
+import org.llaith.onyx.toolkit.pattern.results.ResultList;
+import org.llaith.onyx.toolkit.pattern.results.ResultObject;
 
 import java.io.Serializable;
 
-import static org.llaith.onyx.toolkit.util.lang.Guard.notNull;
+import static org.llaith.onyx.toolkit.lang.Guard.notNull;
+
 
 /**
  * Note, all 'externalId-based', (except resolveIdStatement) methods respect

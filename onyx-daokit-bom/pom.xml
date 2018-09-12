@@ -31,7 +31,7 @@
         <junit.version>4.12</junit.version>
         <postgresql.version>42.1.4</postgresql.version>
         <testcontainers.version>1.8.3</testcontainers.version>
-        
+
     </properties>
 
     <dependencyManagement>
@@ -61,8 +61,8 @@
 
             <!-- product deps -->
             <dependency>
-                <groupId>org.llaith.onyx-toolkit</groupId>
-                <artifactId>onyx-toolkit-core</artifactId>
+                <groupId>org.llaith.onyx</groupId>
+                <artifactId>onyx-toolkit</artifactId>
                 <version>${toolkit.version}</version>
             </dependency>
 
@@ -150,7 +150,7 @@
                 <artifactId>flyway-core</artifactId>
                 <version>${flyway.version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>com.zaxxer</groupId>
                 <artifactId>HikariCP</artifactId>
@@ -178,7 +178,7 @@
                 <groupId>org.hamcrest</groupId>
                 <artifactId>hamcrest-all</artifactId>
             </dependency>
-            
+
         </dependencies>
     </dependencyManagement>
 

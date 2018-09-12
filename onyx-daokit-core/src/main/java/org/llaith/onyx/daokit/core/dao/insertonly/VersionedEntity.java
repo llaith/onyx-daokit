@@ -2,9 +2,9 @@ package org.llaith.onyx.daokit.core.dao.insertonly;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import org.llaith.onyx.daokit.core.statement.annotation.Column;
-import org.llaith.onyx.toolkit.util.exception.UncheckedException;
-import org.llaith.onyx.toolkit.util.lang.StringUtil;
-import org.llaith.onyx.toolkit.util.reflection.AnnotationUtil;
+import org.llaith.onyx.toolkit.exception.UncheckedException;
+import org.llaith.onyx.toolkit.lang.StringUtil;
+import org.llaith.onyx.toolkit.reflection.AnnotationUtil;
 import org.llaith.onyx.daokit.core.dao.BaseEntity;
 
 import javax.validation.constraints.NotNull;
@@ -17,7 +17,7 @@ import java.lang.reflect.Field;
 import java.util.Date;
 import java.util.List;
 
-import static org.llaith.onyx.toolkit.util.lang.StringUtil.notBlankOrNull;
+import static org.llaith.onyx.toolkit.lang.StringUtil.notBlankOrNull;
 
 /**
  *

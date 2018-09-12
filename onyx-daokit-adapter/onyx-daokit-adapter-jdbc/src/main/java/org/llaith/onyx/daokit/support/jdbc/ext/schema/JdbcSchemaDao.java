@@ -1,9 +1,9 @@
 package org.llaith.onyx.daokit.support.jdbc.ext.schema;
 
 import com.codahale.metrics.MetricRegistry;
-import org.llaith.onyx.toolkit.results.ResultCount;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
 import org.llaith.onyx.daokit.support.jdbc.core.statement.JdbcStatementActionFactory;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.lang.Guard;
 import org.llaith.onyx.daokit.core.statement.StatementBuilder;
 import org.llaith.onyx.daokit.ext.schema.SchemaDao;
 

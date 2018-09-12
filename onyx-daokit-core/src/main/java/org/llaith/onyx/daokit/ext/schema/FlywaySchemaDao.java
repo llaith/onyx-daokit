@@ -1,8 +1,8 @@
 package org.llaith.onyx.daokit.ext.schema;
 
 import org.flywaydb.core.Flyway;
-import org.llaith.onyx.toolkit.results.ResultCount;
-import org.llaith.onyx.toolkit.util.lang.Guard;
+import org.llaith.onyx.toolkit.lang.Guard;
+import org.llaith.onyx.toolkit.pattern.results.ResultCount;
 
 /**
  * Allows a flyway schema to be created and dropped when required.
@@ -22,7 +22,7 @@ public class FlywaySchemaDao implements SchemaDao {
 
         flyway.setSchemas(this.schemaId);
         flyway.getPlaceholders()
-                .putIfAbsent(this.SCHEMA_ID, this.schemaId);
+              .putIfAbsent(this.SCHEMA_ID, this.schemaId);
 
     }
 
