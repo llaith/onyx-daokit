@@ -29,7 +29,7 @@
         <flyway.version>4.1.2</flyway.version>
         <modelmapper.version>0.7.3</modelmapper.version>
         <junit.version>4.12</junit.version>
-        <postgresql.version>42.1.4</postgresql.version>
+        <postgresql.version>42.4.1</postgresql.version>
         <testcontainers.version>1.8.3</testcontainers.version>
 
     </properties>
